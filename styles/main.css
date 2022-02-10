@@ -3,7 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+html {
+    background-color: lightsteelblue;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -12,6 +19,7 @@ body {
     margin: 0 auto;
     border: 3px solid steelblue;
     box-shadow: 5px 10px 8px 10px #888888;
+    background-color: white;
 }
 h1, h2, h3, p, blockquote {
     margin-bottom: 12px;
@@ -26,12 +34,30 @@ header h2 {
     color: steelblue;
     text-shadow: 5px 5px 12px;
 }
+header h2, header h3 {
+    margin-bottom: 0;
+}
 .logoimage {
     float: left;
     margin-right: 15px;
 }
 main {
     padding: 0 1em;
+}
+aside {
+    width: 30%;
+    padding-top: 1.5em;
+}
+section {
+    width: 70%;
+    float: right;
+}
+blockquote {
+    font-style: italic;
+    padding: 1em;
+    border-left: 3px solid steelblue;
+    background-color: #eeeeee;
+    border-radius: 5px;
 }
 h3 {
     font-size: 150%;
@@ -59,6 +85,7 @@ li {
     line-height: 130%;
 }
 footer {
+    clear: both;
     background-color: steelblue;
     padding: 15px 0;
     margin-top: 15px;
